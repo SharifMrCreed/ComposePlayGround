@@ -1,12 +1,10 @@
-package tech.bawano.composeplayground.ui.theme
+package tech.bawano.composeplayground.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import tech.bawano.composeplayground.R
+import tech.bawano.composeplayground.ui.theme.Typography
 
 @Composable
 fun ProfileView() {
@@ -54,7 +53,9 @@ fun ImageWithGradientCaption(
                     ),
             )
             Text(
-                modifier = Modifier.padding(16.dp).wrapContentSize(),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .wrapContentSize(),
                 text = title,
                 style = Typography.bodyLarge,
                 color = Color.White,
@@ -70,11 +71,18 @@ fun ImageWithGradientCaption(
 @Composable
 fun Preview() {
 
-    Box(modifier = Modifier.fillMaxWidth(0.45f)) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(0.45f)
+            .wrapContentSize()
+    ) {
         ImageWithGradientCaption(
             painter = painterResource(id = R.drawable.img),
             title = "An image of Sharif"
         )
     }
 
+
 }
+
+

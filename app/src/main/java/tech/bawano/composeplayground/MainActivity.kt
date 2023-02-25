@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import tech.bawano.composeplayground.ui.theme.ComposePlayGroundTheme
-import tech.bawano.composeplayground.ui.theme.ImageWithGradientCaption
+import tech.bawano.composeplayground.components.ImageWithGradientCaption
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
