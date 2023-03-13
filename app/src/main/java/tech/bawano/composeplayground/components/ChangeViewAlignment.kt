@@ -1,4 +1,4 @@
-package tech.bawano.composeplayground.ui.theme
+package tech.bawano.composeplayground.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import tech.bawano.composeplayground.R
-import tech.bawano.composeplayground.components.ImageWithGradientCaption
 import kotlin.random.Random
 
 
