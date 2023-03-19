@@ -10,10 +10,12 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.BrushPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import tech.bawano.composeplayground.components.CircularProgressIndicatorPreview
 import tech.bawano.composeplayground.components.ImageWithGradientCaption
+import tech.bawano.composeplayground.components.RotatableImage
 import tech.bawano.composeplayground.ui.theme.ComposePlayGroundTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,13 +28,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                        CircularProgressIndicatorPreview()
-//                            CircularProgressIndicator(30f, animationDurationMillis = 1000)
-                        }
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        RotatableImage(modifier = Modifier.fillMaxSize(0.4f),painter = painterResource(R.drawable.img), contentDescription = "Sharif Ssemujju")
                     }
                 }
             }
+        }
     }
 }
 
@@ -41,6 +42,10 @@ class MainActivity : ComponentActivity() {
 fun DefaultPreview() {
     ComposePlayGroundTheme {
         val title = "A Picture of Sharif"
-        ImageWithGradientCaption(painter = painterResource(id = R.drawable.img), title = title, contentDescription = title)
+        ImageWithGradientCaption(
+            painter = painterResource(id = R.drawable.img),
+            title = title,
+            contentDescription = title
+        )
     }
 }
